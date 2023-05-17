@@ -26,9 +26,9 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
       renders the first one that matches the current URL. */}
         <Routes>
-          <Route path="/" element={LandingPage()} />
-          <Route path="/login" element={LoginPage()} />
-          <Route path="/register" element={RegisterPage()} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
         </Routes>
       </div>
     </BrowserRouter>
