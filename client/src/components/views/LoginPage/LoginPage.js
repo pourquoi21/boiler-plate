@@ -26,15 +26,13 @@ function LoginPage() {
       password: password,
     };
 
-    dispatch(
-      loginUser(body).then((response) => {
-        if (response.payload.loginSuccess) {
-          navigate("/");
-        } else {
-          alert("Error*");
-        }
-      })
-    );
+    dispatch(loginUser(body)).then((response) => {
+      if (response.payload.loginSuccess) {
+        navigate("/");
+      } else {
+        alert("Error*");
+      }
+    });
   };
 
   return (
