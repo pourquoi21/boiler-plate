@@ -27,9 +27,30 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
       renders the first one that matches the current URL. */}
         <Routes>
-          <Route path="/" element={Auth(LandingPage, null)} />
-          <Route path="/login" element={Auth(LoginPage, false)} />
-          <Route path="/register" element={Auth(RegisterPage, false)} />
+          <Route
+            path="/"
+            element={
+              <Auth>
+                <LandingPage />
+              </Auth>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <Auth option={false}>
+                <LoginPage />
+              </Auth>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <Auth option={false}>
+                <RegisterPage />
+              </Auth>
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>

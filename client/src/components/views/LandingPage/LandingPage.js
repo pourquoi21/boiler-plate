@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import auth from "../../../hoc/auth";
+import Auth from "../../../hoc/auth";
 
 function LandingPage() {
   const navigate = useNavigate();
